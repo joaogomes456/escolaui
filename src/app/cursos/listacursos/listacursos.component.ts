@@ -1,4 +1,6 @@
+import { DataSource } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
+import { Curso } from 'src/app/core/model';
 
 @Component({
   selector: 'app-listacursos',
@@ -6,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listacursos.component.scss']
 })
 export class ListacursosComponent implements OnInit {
+
+  cursos: Curso[] = [
+
+    {"id":1, "nomecurso": 'Desenvolvimento de Sistemas'}
+
+  ];
+  displayedColumns = ['nomecurso'];
+
 
   constructor() { }
 
