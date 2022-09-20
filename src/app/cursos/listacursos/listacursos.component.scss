@@ -1,13 +1,19 @@
 .table{
-  width: 80%;
-  height: auto;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
   td{
     padding-left: 11px;
   }
   th{
     padding-left: 11px;
+    font-size: 12pt;
   }
+}
+
+.corpo{
+  width: 80%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.2rem solid #0051ff;
+  border-radius: 0.8rem;
 }
