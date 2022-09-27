@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Aluno } from 'src/app/core/model';
 import { AlunosService } from '../alunos.service';
 
@@ -10,12 +11,14 @@ import { AlunosService } from '../alunos.service';
 })
 export class ListaalunosComponent implements OnInit {
 
-  alunos: Aluno[] = [];
+  alunos: Observable<Aluno[]>;
 
-  constructor(private alunosService: AlunosService) { }
+  constructor(private alunosService: AlunosService) {
+    this.alunos = this.alunosService.listAlunos();
+   }
 
   ngOnInit(): void {
-    this.alunos = this.alunosService.listAlunos();
+
   }
 
 }
